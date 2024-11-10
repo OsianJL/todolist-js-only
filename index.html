@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon/tailwind_logo.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="/src/styles/style.css">
+  <title>MentorTailwind</title>
+</head>
+
+<body class="font-josefin bg-black">
+
+  <div class="bg-[url('/public/images/bg-desktop-dark.jpg')] bg-cover bg-top bg-no-repeat h-[40vh]">
+    <!-- Contenedor central -->
+    <div
+      class="absolute flex flex-col justify-center left-1/2 top-[20%] transform -translate-x-1/2 -translate-y-1/2 w-[40vw] max-w-[90vw] min-w-[30vw]">
+      <header class="w-[100%] flex justify-between mb-10">
+        <div>
+          <h1 class="text-todo-Very-Light-Gray text-4xl tracking-widest">TODO</h1>
+        </div>
+        <div>
+          <img src="/public/images/icon-sun.svg" alt="sun icon">
+        </div>
+      </header>
+      <div class=" bg-todo-Very-Dark-Grayish-Blue flex justify-center p-2">
+        <div class="flex p-1">
+          <div class="border-todo-Dark-Grayish-Blue w-5 rounded-full"></div>
+          <input class="inputMain" type="text" placeholder="Create a new todo..." name="inputMain" value="">
+        </div>
+      </div>
+      <div class="container-list mt-5">
+<ul class="todo-list">
+
+</ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="/src/components/main.js" type="module"></script>
+</body>
+
+</html>
