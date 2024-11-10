@@ -15,28 +15,38 @@
 
 <body class="font-josefin bg-black">
 
-  <div class="bg-[url('/public/images/bg-desktop-dark.jpg')] bg-cover bg-top bg-no-repeat h-[40vh]">
+  <div class="bg-[url('/images/bg-desktop-dark.jpg')] bg-cover bg-top bg-no-repeat h-[40vh]">
     <!-- Contenedor central -->
-    <div
-      class="absolute flex flex-col justify-center left-1/2 top-[20%] transform -translate-x-1/2 -translate-y-1/2 w-[40vw] max-w-[90vw] min-w-[30vw]">
-      <header class="w-[100%] flex justify-between mb-10">
+    <div class="flex flex-col justify-center w-[40%] mx-auto">
+      <header class="w-[100%] flex justify-between mb-10 mt-16">
         <div>
           <h1 class="text-todo-Very-Light-Gray text-4xl tracking-widest">TODO</h1>
         </div>
         <div>
-          <img src="/public/images/icon-sun.svg" alt="sun icon">
+          <img src="/images/icon-sun.svg" alt="sun icon">
         </div>
       </header>
-      <div class=" bg-todo-Very-Dark-Grayish-Blue flex justify-center p-2">
-        <div class="flex p-1">
-          <div class="border-todo-Dark-Grayish-Blue w-5 rounded-full"></div>
-          <input class="inputMain" type="text" placeholder="Create a new todo..." name="inputMain" value="">
+      <div class="itemDiv bg-todo-Very-Dark-Grayish-Blue flex justify-between p-3 rounded-t-lg">
+        <div class="itemDivLeft flex p-1 gap-6 w-[80%]">
+          <div class="circleIcon border-2 border-todo-Dark-Grayish-Blue min-w-10 aspect-square rounded-full "></div>
+          <input class="text-todo-Light-Grayish-Blue inputMain bg-todo-Very-Dark-Grayish-Blue p-1 w-[100%]" type="text"
+            placeholder="Create a new todo..." name="inputMain" value="">
         </div>
       </div>
       <div class="container-list mt-5">
-<ul class="todo-list">
-
-</ul>
+        <ul class="todo-list">
+          <li>
+            <div class=" text-white itemDiv bg-todo-Very-Dark-Grayish-Blue flex justify-between p-3 rounded-b-lg ">
+              <!-- <div class="itemDivLeft flex p-1 gap-4 w-[80%]"> -->
+                <span>items left</span>
+                <div class="flex justify-between gap-2">
+                  <span>All</span>Active<span>Completed</span>
+                </div>
+                <span>Clear Completed</span>
+              </div>
+            </div>
+          </li>
+        </ul>
       </div>
     </div>
   </div>
