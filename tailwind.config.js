@@ -9,7 +9,7 @@ export default {
     extend: {
       colors: {
        "todo-Blue": "hsl(220, 98%, 61%)",
-       "todo-Background": "linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%)",
+       'todo-gradient': 'linear-gradient(90deg, #55DDFF, #C058F3)',
        "todo-Very-Light-Gray": "hsl(0, 0%, 98%)",
        "todo-Very-Light-Grayish-Blue": "hsl(236, 33%, 92%)",
        "todo-Light-Grayish-Blue": "hsl(233, 11%, 84%)",

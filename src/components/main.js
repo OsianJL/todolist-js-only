@@ -1,15 +1,17 @@
 //* cazo el inputMain para obtener el texto
 
-let todos = [{}];
+let todos = [];
 console.log(todos);
 let todoID = 0;
 
+const taskCount = document.querySelector(".task-count")
 const inputMain = document.querySelector(".inputMain");
 const todoList = document.querySelector(".todo-list");
 const removeX = document.createElement("img");
 const checkDiv = document.createElement("div");
 
 console.log(inputMain);
+
 
 inputMain.addEventListener("keydown", (event) => {
   const target = event.target;
@@ -67,9 +69,26 @@ inputMain.addEventListener("keydown", (event) => {
     });
 
     circleIcon.addEventListener("click", (event) => {
-      if (event.target.classList.contains("circleIcon")) {
-        circleIcon.classList.add("bg-green-500");
-        circleIcon.nextSibling.classList.add("line-through");
+      if (event.currentTarget.classList.contains("circleIcon")) {
+        circleIcon.classList.toggle("bg-gradient-to-r");
+        circleIcon.classList.toggle("from-purple-600");
+        circleIcon.classList.toggle("to-blue-600");               
+        circleIcon.nextSibling.classList.toggle("line-through");
+
+        let icon = circleIcon.querySelector("img"); 
+    if (icon) {
+      
+      icon.remove();
+    } else {
+      
+      icon = document.createElement("img");
+      icon.src = "images/icon-check.svg"; 
+      icon.alt = "Check icon";
+      icon.classList.add("w-3", "h-3");
+      circleIcon.classList.add("flex", "items-center", "justify-center"); 
+      circleIcon.appendChild(icon); 
+    }
+
       }
 
       for (let i = 0; i < todos.length; i++) {
@@ -94,3 +113,6 @@ inputMain.addEventListener("keydown", (event) => {
     }
   }
 });
+
+taskCount.textContent = `${todos.length} items left`
+console.log(todos.length)
