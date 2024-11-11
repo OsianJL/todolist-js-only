@@ -1,7 +1,6 @@
 //* cazo el inputMain para obtener el texto
 
 let todos = [];
-console.log(todos);
 let todoID = 0;
 
 const taskCount = document.querySelector(".task-count")
@@ -10,8 +9,10 @@ const todoList = document.querySelector(".todo-list");
 const removeX = document.createElement("img");
 const checkDiv = document.createElement("div");
 
-console.log(inputMain);
 
+function updateTaskCount() {
+  taskCount.textContent = `${todos.length} items left`;
+}
 
 inputMain.addEventListener("keydown", (event) => {
   const target = event.target;
@@ -27,6 +28,7 @@ inputMain.addEventListener("keydown", (event) => {
     };
     todos.push(todoObject);
     target.value = "";
+    updateTaskCount();
 
     const listItem = document.createElement("li");
     listItem.className =
@@ -37,7 +39,7 @@ inputMain.addEventListener("keydown", (event) => {
 
     const circleIcon = document.createElement("div");
     circleIcon.className =
-      "circleIcon border-2 border-todo-Dark-Grayish-Blue rounded-full w-6 cursor-pointer";
+      "circleIcon border-2 border-todo-Dark-Grayish-Blue hover:border-purple-600 rounded-full w-6 cursor-pointer";
 
     const itemText = document.createElement("h2");
     itemText.className = "text-white";
@@ -66,6 +68,7 @@ inputMain.addEventListener("keydown", (event) => {
           break;
         }
       }
+      updateTaskCount()
     });
 
     circleIcon.addEventListener("click", (event) => {
@@ -101,7 +104,7 @@ inputMain.addEventListener("keydown", (event) => {
 
     for (let todo of todos) {
       itemText.innerHTML = todo.task;
-
+      itemText.classList.add('cursor-pointer')
       itemRight.appendChild(crossIcon);
 
       itemLeft.appendChild(circleIcon);
@@ -114,5 +117,4 @@ inputMain.addEventListener("keydown", (event) => {
   }
 });
 
-taskCount.textContent = `${todos.length} items left`
-console.log(todos.length)
+updateTaskCount()

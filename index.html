@@ -26,23 +26,25 @@
           <img class="cursor-pointer" src="/images/icon-sun.svg" alt="sun icon">
         </div>
       </header>
-      <div class="itemDiv bg-todo-Very-Dark-Grayish-Blue flex justify-between p-3 rounded-t-lg">
-        <div class="itemDivLeft flex p-1 gap-6 w-[80%]">
-          <div class="circleIcon border-2 border-todo-Dark-Grayish-Blue min-w-10 aspect-square rounded-full "></div>
-          <input class="text-todo-Light-Grayish-Blue inputMain bg-todo-Very-Dark-Grayish-Blue p-1 w-[100%]" type="text"
+      <div class="itemDiv bg-todo-Very-Dark-Grayish-Blue flex justify-between p-1 rounded-t-lg">
+        <div class="itemDivLeft flex p-1 gap-4 w-[80%] items-center">
+          <div class="circleIcon border-2 border-todo-Dark-Grayish-Blue min-w-5 h-5 min-h-5 aspect-square rounded-full flex items-center justify-center"></div>
+          <input class="text-todo-Light-Grayish-Blue focus:outline-none inputMain bg-todo-Very-Dark-Grayish-Blue p-1 w-[100%] items-center" type="text"
             placeholder="Create a new todo..." name="inputMain" value="">
         </div>
       </div>
       <div class="container-list mt-5">
         <ul class="todo-list">
           <li>
-            <div class=" text-white itemDiv bg-todo-Very-Dark-Grayish-Blue flex justify-between p-3 rounded-b-lg ">
+            <div class="text-todo-Light-Grayish-Blue  itemDiv bg-todo-Very-Dark-Grayish-Blue flex justify-between p-3 rounded-b-lg ">
               <!-- <div class="itemDivLeft flex p-1 gap-4 w-[80%]"> -->
                 <span class="task-count">items left</span>
-                <div class="flex justify-between gap-2">
-                  <span>All</span>Active<span>Completed</span>
+                <div class="flex justify-between gap-2 ">
+                  <span class="all cursor-pointer hover:text-white">All</span>
+                  <span class="active cursor-pointer hover:text-white">Active</span>
+                  <span class="completed cursor-pointer hover:text-white">Completed</span>
                 </div>
-                <span>Clear Completed</span>
+                <span class="clear cursor-pointer hover:text-white">Clear Completed</span>
               </div>
             </div>
           </li>
